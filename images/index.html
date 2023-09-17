@@ -36,16 +36,16 @@
             <section>
                 <h2>Plan Your Trip</h2>
                 <div>
-                    <h3>How to Get there</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
-                        </svg>
-                        <a href=”#” title= ”Search for flights”>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <polyline points="9 6 15 12 9 18" />
-                        </svg></a>
+                <h3>How to Get there</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
+                    </svg>
+                    <a href=”#” title= ”Search for flights”>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <polyline points="9 6 15 12 9 18" />
+                    </svg></a>
                 </div>
 
                 <div>
@@ -56,7 +56,7 @@
                     <circle cx="7" cy="10" r="1" />
                     </svg>
                     
-                    <a href=”#”) title=”Search for Hotels”>
+                    <a href=”#” title=”Search for Hotels”>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <polyline points="9 6 15 12 9 18" />
@@ -98,31 +98,39 @@
             <section>
                 <h2>Testimonials</h2>
                     <div>
-                    Miranda Blake
-                    miranda-blake.png
-                    Traveling From: London, England
-                    “I traveled here for business, but my stay was extended. Now it is my home.”
-                    </div>
-
-                    <div>       
-                    Max Winter
-                    max-winter.png
-                    Traveling From: Berlin, Germany
-                    “Great escape from my reality. Beautiful sunsets, wonderful people, great beer. ”
-                    </div> 
-                
-                    <div>    
-                    Inés Villegoes
-                    ines-villegoes.png
-                    Traveling From: Barcelona, Spain
-                    “A very safe environment for all travelers.”
+                        <img src="miranda-blake.png" alt="">
+                        <h3>Miranda Blake</h3>
+                            <dl>
+                                <dt>Traveling From: London, England</dt>
+                                <dd>“I traveled here for business, but my stay was extended. Now it is my home.”</dd>
+                            </dl>
                     </div>
 
                     <div>
-                    Carmen Lorenzo
-                    carmen-lorenzo.png
-                    Traveling From: Madrid, Spain
-                    “Live, laugh, love-- everything you need in Majorca.”
+                        <img src="max-winter.png" alt="">       
+                        <h3>Max Winter</h3>
+                            <dl>
+                                <dt>Traveling From: Berlin, Germany</dt>
+                                <dd>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer.”</dd>
+                            </dl>
+                    </div> 
+                
+                    <div>  
+                        <img src="ines-villegoes.png" alt="">  
+                        <h3>Inés Villegoes</h3>
+                            <dl>
+                                <dt>Traveling From: Barcelona, Spain</dt>
+                                <dd>“A very safe environment for all travelers.”</dd>
+                            </dl>
+                    </div>
+
+                    <div>
+                        <img src="carmen-lorenzo.png" alt="">
+                        <h3>Carmen Lorenzo</h3>
+                            <dl>
+                                <dt>Traveling From: Madrid, Spain</dt>
+                                <dd>“Live, laugh, love-- everything you need in Majorca.”</dd>
+                            </dl>
                     </div>
             </section>
             
@@ -178,20 +186,54 @@
             <section>
                 <h2>Contact Us</h2>
                     <form>
-                        First Name (Enter first name)
-                        Last Name (Enter last name)
-                        
-                        Contact Method (Email, Text, Phone)
-                        Email Address (Enter Email)
-                        Phone Number (Enter telephone number)
-                        
-                        Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-                        Travel Time (Fall, Winter, Spring, Summer, Flexible)
+                        <!--First Name (Enter first name), Last Name (Enter last name)-->
+                        <label for="firstName">First name <span class="required">*</span></label> 
+                        <input id="fullName" autocomplete="name" required>
+                        <label for="lastName">Last name <span class="required">*</span></label> 
+                        <input id="lastName" autocomplete="name" required>
+                        <!--Contact Method (Email, Text, Phone)-->
+                        <fieldset>
+                                <legend>Contact Method<span class="required">*</span></legend>
+                            <input id="prefEmail" type="radio" name="Email" value="methodEmail">
+                                <label for="prefEmail">Email</label>
+                            <input id="prefText" type="radio" name="Text" value="methodText">
+                                <label for="prefText">Text</label>
+                            <input id="prefPhone" type="radio" name="Phone" value="methodPhone">
+                                <label for="prefPhone">Phone</label>
+                        </fieldset>
+                        <!--Email Address (Enter Email), Phone Number (Enter telephone number)-->
+                        <label for="email">Email <span class="required">*</span></label>
+                            <input id="email" autocomplete="name" required>
+                        <label for="phone">Phone <span class="required">*</span></label>
+                            <input id="phone" type="text" autocomplete="name" required>
+                        <!--Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)-->
+                        <label for="myDestination" id="Destination">Destination<span class="required">*</span></label>
+                            <select name="myDestination" id="myDestination">
+                                <option value="Barcelona">Barcelona</option>
+                                <option value="Granada">Granada</option>
+                                <option value="Ibiza">Ibiza</option>
+                                <option value="Madrid">Madrid</option>
+                                <option value="Majorca">Majorca</option>
+                                <option value="Seville">Seville</option>
+                                <option value="Tenerife">Tenerife</option>
+                                <option value="Valencia">Valencia</option>
+                            </select>
+                        <!--Travel Time (Fall, Winter, Spring, Summer, Flexible)-->
+                        <label for="myTime" id="Time">Travel Time<span class="required">*</span></label>
+                        <select name="myTime" id="myTime">
+                            <option value="Fall">Fall</option>
+                            <option value="Winter">Winter</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
                     </form>
             </section>
         </main>
         <footer>
-            <small>Copyright 2021 Wunderlust
+            <!--CHECK WITH PROF-->
+            <small>
+                Copyright 2021 Wunderlust
                 Privacy Statement
                 Terms of Service
             </small>
