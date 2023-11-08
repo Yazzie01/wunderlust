@@ -49,6 +49,25 @@ table {
 }
 /* END CSS Reset*/
 
+:root{
+	--yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA; 
+    --white: #FFFFFF;
+    --black: #00000;
+	font-size: 16px;
+	font-family: Roboto, Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+
 #skip {
     background-color: aqua;
+    text-indent: -9999px;
+    position: absolute; 
+    background-color:black;
+    color: white;
 }
