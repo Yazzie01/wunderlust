@@ -49,3 +49,6 @@ table {
 }
 /* END CSS Reset*/
 
+#skip {
+    background-color: aqua;
+}
