@@ -49,6 +49,8 @@ table {
 }
 /* END CSS Reset*/
 
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
 :root{
 	--yellow: #F6D64A;
     --teal: #55BCD5;
@@ -58,9 +60,8 @@ table {
     --light-gray: #EAEAEA; 
     --white: #FFFFFF;
     --black: #00000;
-	font-size: 16px;
-	font-family: Roboto, Arial, sans-serif;
-	box-sizing: border-box;
+    font-family: 'Molle', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -70,4 +71,32 @@ table {
     position: absolute; 
     background-color:black;
     color: white;
+}
+
+body {
+    width:375px;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+    font-size: 32px;
+}
+h1 {
+    color: var(--dark-gray);
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: var(--dark-gray);
 }
