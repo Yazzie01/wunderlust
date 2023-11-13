@@ -176,6 +176,15 @@ h4, p, q, small, nav, button, form {
     font-weight: bold;
 }
 
+#nums legend, label{
+    font-weight: bold;
+}
+
+.radio-label{
+    font-weight: lighter;
+}
+
+
 .required {
     font-weight: lighter;
     color: var(--purple);
