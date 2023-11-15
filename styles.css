@@ -74,7 +74,8 @@ table {
 }
 
 body {
-    width:375px;
+    display: grid;
+    width:320px;
     margin: 0 auto; 
     padding:0;
 }
@@ -82,24 +83,101 @@ body {
 header {
     background: rgb(85,188,213);
     background: linear-gradient(180deg, rgba(85,188,213,1) 0%, rgba(255,255,255,1) 65%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 header img{ 
-    width: 45%;
+    margin-top: 10px;
+    width: 80%;
 }
 
 header h1, p {
     padding: 10px;
 }
 
-#menu-toggle{
-    background-color: var(--yellow);
+header h1, p {
+    grid-column: 1/-1;
 }
+
+nav {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav ul li {
+    color: var(--black);
+    text-align: center;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--teal);
+    max-height: 0;
+    transition: max-height 1s ease-out;
+}
+li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+#menu-toggle{
+    display: block;
+    position: relative;
+    z-index: 1;  
+}
+
+#menu-toggle label{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--yellow);
+    width: 125px;
+    padding: 13px;
+    margin-top: 14px;
+    margin-left: 26px;
+}
+
+#menu-toggle label:before, #menu-toggle label:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#menu-toggle label:before {
+    top: 5px;
+}
+#menu-toggle label:after {
+    top: -5px;
+}
+#menu-toggle input {
+    display: none;
+}
+#menu-toggle input:checked ~ ul {
+    max-height: 500px;
+}
+#menu-toggle input:checked ~ label:not(.steps) label:before, input:checked ~ label:not(.steps) label:after {
+    top: 0;
+}
+
+
+
+#toggle {
+    opacity: 10%;
+}
+
 
 #intro img{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 98%;
     margin-bottom: 10px;
 }
 
@@ -126,6 +204,8 @@ h4, p, q, small, nav, button, form {
     color: var(--dark-gray);
 }
 
+
+/*Plan Section*/
 #plan {
     background-color: var(--yellow);
 }
@@ -135,12 +215,15 @@ h4, p, q, small, nav, button, form {
     border: 4px solid var(--white) ;
     border-radius: 15px;
     padding: 35px;
-    width: 45%;
 }
 
+
+/*About Section*/
 #about{
     background-color: var(--blue);
-    padding: 20px;
+    padding: 15px;
+    display: grid;
+    justify-items: center;
 }
 
 #about div{
@@ -150,27 +233,33 @@ h4, p, q, small, nav, button, form {
 
 #about div section, img{
     width: 50%;
-    padding-left: 10px;
 }
 
+
+/*Form Section*/
 .form-required{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 
+#contact input{
+    border: 2px solid var(--purple);
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+    width: 120px;
+}
+
 #contact form{
-    display: block;
-    width: 300px;
-    padding: 1em;
-    margin: 0 auto;
     font-size: 18px;
 }
 
 #content input, label, fieldset{
 	display: block;
-	width: 95%;
     padding: 10px;
 }
+
+/*Names-Labels Section*/
 
 #names label {
     font-weight: bold;
@@ -178,6 +267,13 @@ h4, p, q, small, nav, button, form {
 
 #nums legend, label{
     font-weight: bold;
+}
+#nums {
+    padding: 5px;
+}
+
+#nums fieldset{
+    border: var(--purple);
 }
 
 .radio-label{
@@ -188,6 +284,11 @@ h4, p, q, small, nav, button, form {
 .required {
     font-weight: lighter;
     color: var(--purple);
+}
+
+.custom-select {
+    margin-bottom: 15px;
+    border: var(--purple);
 }
 
 footer {
