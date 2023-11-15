@@ -157,6 +157,7 @@ li a {
 }
 #menu-toggle label:after {
     top: -5px;
+    width: 320px;
 }
 #menu-toggle input {
     display: none;
@@ -164,6 +165,7 @@ li a {
 #menu-toggle input:checked ~ ul {
     max-height: 500px;
 }
+
 #menu-toggle input:checked ~ label:not(.steps) label:before, input:checked ~ label:not(.steps) label:after {
     top: 0;
 }
@@ -177,7 +179,8 @@ li a {
 
 #intro img{
     display: block;
-    width: 98%;
+    width: 100%;
+    height: 220px;
     margin-bottom: 10px;
 }
 
@@ -208,27 +211,79 @@ h4, p, q, small, nav, button, form {
 /*Plan Section*/
 #plan {
     background-color: var(--yellow);
+    padding-bottom: 10px;
 }
 
-#plan div img {
+#plan h3 {
+    padding: 10px;
+}
+
+#plan div section {
     background-color: var(--teal);
     border: 4px solid var(--white) ;
     border-radius: 15px;
-    padding: 35px;
+    margin-bottom: 22px;
 }
+
+#plan div section h4{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#plan div {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#plan div img {
+    padding: 25px;
+    margin-bottom: 20px;
+    width: 208px;
+    height: 145px;
+}
+
+/*Testimonials Section*/
+
+#testimonials h3{
+    margin-bottom: 14px;
+}
+
+#testimonials div {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 
 
 /*About Section*/
 #about{
     background-color: var(--blue);
-    padding: 15px;
     display: grid;
     justify-items: center;
+}
+
+#about h3 {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 16px;
 }
 
 #about div{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: end;
+    justify-items: center;
+}
+
+#about h4 {
+    font-weight: bold;
+}
+
+#about div section h4, p{
+    text-align: center;
 }
 
 #about div section, img{
@@ -242,16 +297,29 @@ h4, p, q, small, nav, button, form {
     font-size: 20px;
 }
 
+#contact {
+    margin-bottom: 10px;
+}
+
+#contact h3{
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
 #contact input{
     border: 2px solid var(--purple);
     border-radius: 4px;
     padding: 10px;
     margin: 0 auto 10px auto;
-    width: 120px;
 }
 
 #contact form{
     font-size: 18px;
+}
+
+#contact input[type="text" i] {
+    width: 215px;
 }
 
 #content input, label, fieldset{
@@ -265,9 +333,15 @@ h4, p, q, small, nav, button, form {
     font-weight: bold;
 }
 
-#nums legend, label{
+#contact legend label{
     font-weight: bold;
+    margin-left: -55px;
 }
+
+#nums input[type="email" i], #nums input[type="tel" i] {
+    width: 215px;
+}
+
 #nums {
     padding: 5px;
 }
@@ -280,19 +354,20 @@ h4, p, q, small, nav, button, form {
     font-weight: lighter;
 }
 
-
 .required {
     font-weight: lighter;
     color: var(--purple);
 }
 
-.custom-select {
+.custom-select select{
     margin-bottom: 15px;
-    border: var(--purple);
+    border: 2px solid var(--purple);
+    width: 215px
 }
 
 footer {
     background-color: var(--light-gray);
+    display: inline-grid;
     text-align: center;
     padding: 10px;
 }
@@ -300,4 +375,5 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--dark-gray);
+    margin-bottom: 10px;
 }
