@@ -138,10 +138,8 @@ li a {
     cursor: pointer;
     user-select: none;
     background-color: var(--yellow);
-    width: 125px;
     padding: 13px;
     margin-top: 14px;
-    margin-left: 26px;
 }
 
 #menu-toggle label:before, #menu-toggle label:after {
@@ -170,12 +168,9 @@ li a {
     top: 0;
 }
 
-
-
 #toggle {
     opacity: 10%;
 }
-
 
 #intro img{
     display: block;
@@ -226,7 +221,6 @@ h4, p, q, small, nav, button, form {
 }
 
 #plan div section h4{
-    text-align: center;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -246,6 +240,7 @@ h4, p, q, small, nav, button, form {
 /*Testimonials Section*/
 
 #testimonials h3{
+    margin-top: 18px;
     margin-bottom: 14px;
 }
 
@@ -255,7 +250,13 @@ h4, p, q, small, nav, button, form {
     margin-bottom: 10px;
 }
 
+#testimonials div section h4 {
+    font-weight: bold;
+}
 
+#testimonials div section {
+    margin-bottom: 22px;
+}
 
 
 /*About Section*/
@@ -282,7 +283,7 @@ h4, p, q, small, nav, button, form {
     font-weight: bold;
 }
 
-#about div section h4, p{
+#plan div section h4{
     text-align: center;
 }
 
@@ -309,7 +310,6 @@ h4, p, q, small, nav, button, form {
 
 #contact input{
     border: 2px solid var(--purple);
-    border-radius: 4px;
     padding: 10px;
     margin: 0 auto 10px auto;
 }
@@ -319,12 +319,17 @@ h4, p, q, small, nav, button, form {
 }
 
 #contact input[type="text" i] {
-    width: 215px;
+    width: 240px;
+    margin-left: 15px;
 }
 
 #content input, label, fieldset{
 	display: block;
     padding: 10px;
+}
+
+#nums input[type="radio" i]{
+    background-color: var(--purple);
 }
 
 /*Names-Labels Section*/
@@ -339,7 +344,8 @@ h4, p, q, small, nav, button, form {
 }
 
 #nums input[type="email" i], #nums input[type="tel" i] {
-    width: 215px;
+    width: 240px;
+    margin-left: 15px;
 }
 
 #nums {
@@ -362,7 +368,16 @@ h4, p, q, small, nav, button, form {
 .custom-select select{
     margin-bottom: 15px;
     border: 2px solid var(--purple);
-    width: 215px
+    width: 262px;
+    height: 40px; 
+    margin-left: 22px;
+}
+
+#contact input[type="submit" i] {
+    background-color: var(--purple);
+    color: var(--white);
+    width: 262px;
+    margin-left: 22px;
 }
 
 footer {
