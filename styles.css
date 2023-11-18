@@ -126,7 +126,7 @@ li a {
     color: var(--black);
 }
 
-a:hover, input:hover {
+li:hover, input:hover {
     background-color: var(--dark-gray);
     color: var(--white);
 }
@@ -398,3 +398,43 @@ footer a {
     color: var(--dark-gray);
     margin-bottom: 10px;
 }
+
+@media screen and (min-width:600px) {
+    body {
+        min-width: 600px;
+    }
+      #menu-toggle label, input {
+        display:none;
+      }
+      #menu-toggle ul {
+        width:600px;
+        overflow:visible;
+        position:absolute;
+
+        top:0;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+    #menu-toggle li a {
+        padding: 5px;
+        display: grid;
+        grid-column: 1/-1;
+    }
+
+    #plan div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    }
+
+    #testimonials div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    #about div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+      }
