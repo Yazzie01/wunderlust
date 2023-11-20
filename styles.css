@@ -126,7 +126,7 @@ li a {
     color: var(--black);
 }
 
-li:hover, input:hover {
+nav li:hover {
     background-color: var(--dark-gray);
     color: var(--white);
 }
@@ -399,26 +399,71 @@ footer a {
     margin-bottom: 10px;
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:650px) {
     body {
-        min-width: 600px;
+        min-width: 650px;
+        display: grid;
     }
-      #menu-toggle label, input {
+
+    header {
+        background: rgb(85,188,213);
+        background: linear-gradient(180deg, rgba(85,188,213,1) 0%, rgba(255,255,255,1) 100%);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    header img{
+        margin-top: 8px;
+        width: 132px;
+    }
+    header h1{
+    grid-row: 1/3;
+    grid-column: 2/4;
+    margin-left: -28px;
+    margin-top: 6px;
+    }
+    header p{
+    grid-row: 2/4;
+    grid-column: 2/4;
+    margin-left: -28px;
+    margin-top: -30px;
+    }
+
+    nav {
+    display: grid;
+    grid-column: -1/1;
+    padding-top: 8px;
+    margin-bottom: 40px;
+    }
+
+    nav li:hover {
+        background-color: var(--yellow);
+        color: var(--black);
+    }  
+      #menu-toggle label{ 
         display:none;
       }
       #menu-toggle ul {
-        width:600px;
+        width: 545px;
+        margin-left: 32px;
         overflow:visible;
         position:absolute;
-
         top:0;
         display:grid;
         grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+        font-size: 15px;
+        background-color: var(--white);
     }
+
     #menu-toggle li a {
         padding: 5px;
         display: grid;
         grid-column: 1/-1;
+    }
+
+    main {
+        padding: 28px;
     }
 
     #plan div{
@@ -436,5 +481,33 @@ footer a {
     #about div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #contact form {
+        font-size: 18px;
+        padding: 10px;
+        margin-left: 42px;
+    }
+
+    #contact input[type="text" i] {
+        width: 450px;
+        margin-left: 11px;
+    }
+
+    #nums input[type="email" i], #nums input[type="tel" i] {
+        width: 450px;
+        margin-left: 11px;
+    }
+
+    .custom-select select {
+        width: 475px;
+        margin-left: 16px;
+    }
+
+    #contact input[type="submit" i] {
+        background-color: var(--purple);
+        color: var(--white);
+        width: 190px;
+        margin-left: 302px;
     }
       }
