@@ -434,9 +434,10 @@ footer a {
     grid-column: -1/1;
     padding-top: 8px;
     margin-bottom: 40px;
+    margin-left: 25px;
     }
 
-    nav li:hover {
+    #menu-toggle li:hover {
         background-color: var(--yellow);
         color: var(--black);
     }  
@@ -453,13 +454,13 @@ footer a {
         grid-template-columns:1fr 1fr 1fr 1fr;
         grid-gap: 5px;
         font-size: 15px;
-        background-color: var(--white);
     }
 
-    #menu-toggle li a {
+    #menu-toggle a {
         padding: 5px;
         display: grid;
         grid-column: 1/-1;
+        background-color: var(--white);
     }
 
     main {
