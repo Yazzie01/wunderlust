@@ -332,6 +332,8 @@ h4, p, q, small, nav, button, form {
 #content input, label, fieldset{
 	display: block;
     padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #nums input[type="radio" i]{
@@ -429,6 +431,19 @@ footer a {
     margin-top: -30px;
     }
 
+    #img-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    width: 595px;
+    gap: 10px;
+    }
+
+    #img-grid picture {
+        display: grid;
+        grid-column: 1/3;
+        margin-top: -10px;
+    }
+
     nav {
     display: grid;
     grid-column: -1/1;
@@ -437,6 +452,9 @@ footer a {
     margin-left: 25px;
     }
 
+    nav ul li {
+        background-color: white;
+    }
     #menu-toggle li:hover {
         background-color: var(--yellow);
         color: var(--black);
@@ -454,13 +472,13 @@ footer a {
         grid-template-columns:1fr 1fr 1fr 1fr;
         grid-gap: 5px;
         font-size: 15px;
+        background-color: var(--white);
     }
 
     #menu-toggle a {
         padding: 5px;
         display: grid;
         grid-column: 1/-1;
-        background-color: var(--white);
     }
 
     main {
@@ -519,6 +537,9 @@ footer a {
         min-width: 1250px;
         display: grid;
     }
+    header{
+        margin-bottom: 80px;
+    }
     header img {
         width: 100%;
     }
@@ -536,8 +557,81 @@ footer a {
         margin-top: -65px;
     }
     nav {
-        position: relative;
-        display: inline-block;
-        top:25px;
+        margin-left: 674px;
+        margin-top: -212px;
       }
+    nav ul li {
+        background-color: white;
+    }
+
+    .active li:active {
+            background-color: var(--yellow);
+          }
+
+    #intro h2{
+        margin-left: 67px;
+        margin-bottom: -46px;
+    }
+
+    #intro p{
+    margin-left: 55px;
+    margin-right: 654px;
+    margin-top: 55px;
+    }
+
+    #img-grid {
+        margin-left: 575px;
+        margin-top: -328px;
+        margin-bottom: 25px;
+    }
+
+    #plan {
+        padding: 20px;
+    }
+    #plan div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    #testimonials div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 45px;
+    }
+
+    #about {
+        height: 245px;
+    }
+
+    #contact form {
+        display:flex;
+        margin-left: 120px;
+    }
+    #contact input[type="text" i] {
+        width: 280px
+    }
+
+    #nums input[type="email" i], #nums input[type="tel" i] {
+        width: 280px;
+    }
+
+    .custom-select select {
+        width: 280px;
+    }
+
+    #contact input[type="submit" i] {
+        background-color: var(--purple);
+        color: var(--white);
+        width: 100px;
+        width: 175px;
+        margin-left: 127px;
+        margin-top: 30px;
+    }
+
+    #nums fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
